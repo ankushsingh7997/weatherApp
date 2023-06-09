@@ -6,12 +6,7 @@ import {
 
 const API_KEY = "AJtcMayEAmEpDyVzNLF7W5zr1Pdpk7VQ";
 
-// const API_KEY="VdSr0kyzN0X65Qdus2zPcQM682is1j6l";
-// const API_KEY="UekYGFqQMgXyAFehXIJCYVqWhZWNFyMU";
 
-// const API_KEY="QQjeW7y9v1Z6ZfO5avxwgs6xL6265iUs";
-
-// const API_KEY="yxWC93CSyWtIai7E32Smeba1auLEQeQF";
 
 const getData = async (city, units) => {
   let check = false;
