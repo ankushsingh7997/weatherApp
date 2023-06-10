@@ -333,6 +333,24 @@
 
 }
 
+@media screen and (min-width: 773px) and (max-width: 1000px)
+{
+
+  .forcastContainer__overlay
+  {
+    
+    border: 1px solid blue;
+    width: 30vw;
+    
+    
+    
+  
+  }
+
+}
+
+
+
 @media screen  and (max-width: 772px) 
   {
 
@@ -348,6 +366,7 @@
       background-color:rgba(255, 255, 255, 0.8);
       border-radius:0.5rem;
       gap:0.2rem;
+      width: 30vw;
       
     
     }
@@ -447,7 +466,12 @@ height: 200vh;
 .forcastContainer__overlay
 {
 
-height: 80vh;
+height: 90vh;
+width:100%;
+
+padding: 0.5rem;
+background-color:rgba(255, 255, 255, 0.8);
+border-radius:0.5rem;
 }
 
 

@@ -5,6 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import { FaArrowDown, FaArrowUp, FaWind } from "react-icons/fa";
 import { BiHappy } from "react-icons/bi";
 import { MdCompress, MdOutlineWaterDrop } from "react-icons/md";
+import ForcastDescription from "../description/forcastDescription";
 
 const Forcast = (props) => {
  
@@ -47,8 +48,22 @@ const Forcast = (props) => {
                     </div>
                   </div>
                 </div>
-                <div className="forcastContainer">
-                  <div className="carousel_List">
+                <div className="">
+                  <ForcastDescription item={item} propsData={props}/>
+                </div>
+              </div>
+            ))}
+          </Carousel>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Forcast;
+
+
+{/* <div className="carousel_List">
                     <span className="icons">
                       <FaArrowDown />
                     </span>
@@ -105,15 +120,4 @@ const Forcast = (props) => {
                       {item.values.windSpeedAvg.toFixed()}
                       {props.unit === "metric" ? "°C" : "°F"}
                     </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default Forcast;
+                  </div> */}
