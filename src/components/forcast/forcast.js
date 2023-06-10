@@ -35,7 +35,7 @@ const Forcast = (props) => {
                   </div>
                   <div className="detailSection">
                     <div className="detail">
-                      <p className="location">{`${props.stateName}`}</p>
+                      <p className="location">{`${props.stateName.split(",")[0]}`}</p>
                     </div>
                     <div className="detail">
                       <p>{`${props.dailyDate[i].climate}`}</p>
