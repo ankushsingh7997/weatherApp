@@ -49,16 +49,15 @@
 }
 .forcast
 {
+ 
   height: 100%;
   width: 30%;
   
   padding:2rem;
-  
-
 }
 .forcastContainer__overlay
 {
-  height: 76%;
+  /* height: 76%; */
   
   
   
@@ -199,15 +198,17 @@
 
 @media screen  and (max-width: 1040px) {
   
+  
 
   .forcastContainer__overlay
 {
-  height: 97%;
+  /* height: 97%; */
   
   /* display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column; */
+  /* border:1px solid red; */
   padding: 0.3rem;
   background-color:rgba(255, 255, 255, 0.8);
   border-radius:0.5rem;
@@ -273,7 +274,20 @@
 
 
 @media screen  and (max-width: 894px) {
+  
+.detailSection
+{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  margin-top: 1rem;
+  
+}
+.detail{
+  
+  width:100%
 
+}
   .container
 {
   
