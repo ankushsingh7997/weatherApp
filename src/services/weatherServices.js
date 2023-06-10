@@ -8,6 +8,7 @@ const API_KEY = "AJtcMayEAmEpDyVzNLF7W5zr1Pdpk7VQ";
 
 
 
+
 const getData = async (city, units) => {
   let check = false;
   const url = `https://api.tomorrow.io/v4/weather/forecast?location=${city}&apikey=${API_KEY}&units=${units}`;
