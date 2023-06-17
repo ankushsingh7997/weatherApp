@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import snowbg from "../../assets/snow.jpg";
 import sunnybg from "../../assets/sunny.jpg";
+import icepellets from "../../assets/icepellets.jpg";
+import thunderstrom from "../../assets/thunderstrom.jpg";
+import wind from "../../assets/wind.jpg";
+import freezingrain from "../../assets/freezingrain.jpg";
 import rainy from "../../assets/rain.jpg";
 import haze from "../../assets/haze.jpg";
 import cloudy from "../../assets/cloudy.jpg";
@@ -38,11 +42,16 @@ export default function Home() {
   useEffect(() => {
     const background = () => {
       if (weather) {
-        if (weather.climate === "Sunny") setBg(sunnybg);
-        else if (weather.climate === "haze") setBg(haze);
-        else if (weather.climate === "rainy") setBg(rainy);
-        else if (weather.climate === "cloudy") setBg(cloudy);
-        else setBg(snowbg);
+        if (weather.climate === "Clear"||weather.climate ==="Mostly Clear") setBg(sunnybg);
+        else if (weather.climate === "Fog"||weather.climate === "Light Fog") setBg(haze);
+        else if (weather.climate === "Drizzle"||weather.climate === "Rain"||weather.climate === "Light Rain"||weather.climate === "Heavy Rain") setBg(rainy);
+        else if (weather.climate ===  "Cloudy"||weather.climate ===  "Partly Cloudy"||weather.climate ===  "Mostly Cloudy") setBg(cloudy);
+        else if (weather.climate ===  "Thunderstorm") setBg(thunderstrom);
+        else if (weather.climate ===  "Snow"||weather.climate ===  "Flurries"||weather.climate ===  "Light Snow"||weather.climate ===  "Heavy Snow") setBg(snowbg);
+        else if (weather.climate ===  "Freezing Drizzle"||weather.climate ===  "Freezing Rain"||weather.climate ===  "Light Freezing Rain"||weather.climate ===  "Heavy Freezing Rain") setBg(freezingrain);
+        else if (weather.climate ===  "Ice Pellets"||weather.climate ===  "Heavy Ice Pellets"||weather.climate ===  "Light Ice Pellets") setBg(icepellets);
+        else if (weather.climate === "Wind"||weather.climate === "Light Wind"||weather.climate === "Strong Wind") setBg(wind);
+        
       }
     };
 

@@ -49,7 +49,7 @@ const ForcastDescription = (props) => {
       icon: <FaWind />,
       title: "wind speed",
       data: props.item.values.windSpeedAvg.toFixed(),
-      unit: tempUnit,
+      unit: "km/h",
     },
   ];
 

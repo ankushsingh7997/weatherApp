@@ -41,7 +41,7 @@ const Description = (props) => {
       id: 5,
       icon: <MdOutlineWaterDrop />,
       title: "humidity",
-      data: props.weather.temperatureMin,
+      data: props.weather.humidity,
       unit: "%",
     },
     {
@@ -49,7 +49,7 @@ const Description = (props) => {
       icon: <FaWind />,
       title: "wind speed",
       data: props.weather.windSpeed.toFixed(),
-      unit: tempUnit,
+      unit: "km/h",
     },
   ];
 

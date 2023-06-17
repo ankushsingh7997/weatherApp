@@ -16,7 +16,7 @@ const Forcast = (props) => {
     <>
       <div className="forcast">
         <div className="forcastContainer__overlay">
-          <Carousel>
+          <Carousel showThumbs={false}>
             {props.daily.map((item, i) => (
               <div key={i} className="carousel__innerContainer">
                 <div className="forcastContainer1">

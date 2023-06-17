@@ -6,11 +6,11 @@ import {
 
 // const API_KEY = "AJtcMayEAmEpDyVzNLF7W5zr1Pdpk7VQ";
 // const API_KEY="VdSr0kyzN0X65Qdus2zPcQM682is1j6l";
-const API_KEY="UekYGFqQMgXyAFehXIJCYVqWhZWNFyMU";
+// const API_KEY="UekYGFqQMgXyAFehXIJCYVqWhZWNFyMU";
 
 // const API_KEY="QQjeW7y9v1Z6ZfO5avxwgs6xL6265iUs";
 
-// const API_KEY="yxWC93CSyWtIai7E32Smeba1auLEQeQF";
+const API_KEY="yxWC93CSyWtIai7E32Smeba1auLEQeQF";
 
 
 
@@ -33,11 +33,7 @@ const getData = async (city, units) => {
     const {
       temperatureMin,
       temperatureMax,
-      cloudCoverAvg,
-      weatherCodeMax,
-      weatherCodeMin,
-      visibilityMax,
-      snowAccumulationMax,
+      
     } = timelines.daily[0].values;
 
     const { daily } = timelines;
@@ -51,23 +47,20 @@ const getData = async (city, units) => {
       pressureSurfaceLevel,
       temperatureApparent,
       weatherCode,
-      precipitationProbability,
-      precipitationProbabilityMax,
+    
     } = timelines.hourly[0].values;
 
     const { time } = timelines.hourly[0];
-    console.log(process.env.REACT_APP_API_KEY)
+    console.log(data)
 
+    
     const obj = {
-      weatherCodeMax,
-      weatherCodeMin,
-      visibilityMax,
-      cloudCoverAvg,
-      precipitationProbabilityMax,
-      snowAccumulationMax,
+      weatherCodeMax:weatherCode
+      
     };
-    // check climate is rainy , haze , sunny ,cloudy
+    //daily check climate is rainy , haze , sunny ,cloudy
     const { climate, icon } = checkClimate(obj);
+
 
     // utc time conversion
     const Indiantime = timeConversion(time);

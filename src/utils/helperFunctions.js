@@ -22,31 +22,79 @@ const timeConversion = (utcTimeString) => {
 const checkClimate = (obj) => {
   let icon = "";
   let climate = "";
+  const weatherCodes = { 0: "Unknown",
+    1000: "Clear",
+    1001: "Cloudy",
+    1100: "Mostly Clear",
+    1101: "Partly Cloudy",
+    1102: "Mostly Cloudy",
+    2000: "Fog",
+    2100: "Light Fog",
+    3000: "Light Wind",
+    3001: "Wind",
+    3002: "Strong Wind",
+    4000: "Drizzle",
+    4001: "Rain",
+    4200: "Light Rain",
+    4201: "Heavy Rain",
+    5000: "Snow",
+    5001: "Flurries",
+    5100: "Light Snow",
+    5101: "Heavy Snow",
+    6000: "Freezing Drizzle",
+    6001: "Freezing Rain",
+    6200: "Light Freezing Rain",
+    6201: "Heavy Freezing Rain",
+    7000: "Ice Pellets",
+    7101: "Heavy Ice Pellets",
+    7102: "Light Ice Pellets",
+    8000: "Thunderstorm",
+  };
+  climate=weatherCodes[obj.weatherCodeMax]
+  
 
-  if (obj.weatherCodeMax === 1000 && obj.weatherCodeMin === 1000) {
-    climate = "Sunny";
+  if (obj.weatherCodeMax === 1000||obj.weatherCodeMax===1100 ) {
     icon =
       "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/sun.png";
-  } else if (obj.visibilityMax < 10 && obj.cloudCoverAvg >= 50) {
-    climate = "haze";
-    icon =
-      "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/foggy.png";
-  } else if (obj.precipitationProbabilityMax > 0) {
-    climate = "rainy";
-    icon =
-      "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/rain.png";
-  } else if (obj.snowAccumulationMax > 0) {
-    climate = "snowfall";
-    icon =
-      "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/snow.png";
-  } else if (obj.cloudCoverAvg >= 50) {
-    climate = "cloudy";
+  } else if (obj.weatherCodeMax >= 1001 && obj.weatherCodeMax <= 1102) {
     icon =
       "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/cloudy.png";
-  } else {
-    climate = "unknown";
+  } else if (obj.weatherCodeMax >= 2000 && obj.weatherCodeMax <= 2100) {
     icon =
-      "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/unknown.png";
+      "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/foggy.png";
+  } else if (obj.weatherCodeMax >= 3000 && obj.weatherCodeMax <= 3002) {
+  
+    icon =
+      "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/strong-wind.png";
+  } 
+  else if (obj.weatherCodeMax >= 4000 && obj.weatherCodeMax <= 4201) {
+    icon ="https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/rain.png";
+  } 
+  
+   else if (obj.weatherCodeMax >= 5000 && obj.weatherCodeMax <= 5101) {
+    
+  icon =
+        "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/snow.png";
+    }
+    else if (obj.weatherCodeMax >= 6000 && obj.weatherCodeMax <= 6201) {
+    
+  icon =
+        "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/freezing-rain.png";
+    }
+    else if (obj.weatherCodeMax >= 7000 && obj.weatherCodeMax <= 7102) {
+    
+  icon =
+        "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/icepellet.png";
+    }
+    else if (obj.weatherCodeMax === 8000 ) {
+    
+  icon =
+        "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/storm.png";
+    }
+  else {
+  
+    icon =
+      "https://classroom-training-bucket.s3.ap-south-1.amazonaws.com/profileImage/sun.png";
   }
   return { climate, icon };
 };
