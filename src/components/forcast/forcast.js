@@ -1,10 +1,7 @@
-
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { FaArrowDown, FaArrowUp, FaWind } from "react-icons/fa";
-import { BiHappy } from "react-icons/bi";
-import { MdCompress, MdOutlineWaterDrop } from "react-icons/md";
+
 import ForcastDescription from "../description/forcastDescription";
 
 const Forcast = (props) => {
@@ -63,61 +60,3 @@ const Forcast = (props) => {
 export default Forcast;
 
 
-{/* <div className="carousel_List">
-                    <span className="icons">
-                      <FaArrowDown />
-                    </span>
-                    <span className="carousel">min</span>
-                    <span className="temp" style={{ padding: "0.25rem" }}>
-                      {item.values.temperatureMin.toFixed()}
-                      {props.unit === "metric" ? "°C" : "°F"}
-                    </span>
-                  </div>
-                  <div className="carousel_List">
-                    <span className="icons">
-                      <FaArrowUp />
-                    </span>
-                    <span className="carousel">max</span>
-                    <span className="temp">
-                      {item.values.temperatureMax.toFixed()}
-                      {props.unit === "metric" ? "°C" : "°F"}
-                    </span>
-                  </div>
-                  <div className="carousel_List">
-                    <span className="icons">
-                      <BiHappy />
-                    </span>
-                    <span className="carousel">feels like</span>
-                    <span className="temp">
-                      {item.values.temperatureApparentAvg.toFixed()}
-                      {props.unit === "metric" ? "°C" : "°F"}
-                    </span>
-                  </div>
-                  <div className="carousel_List">
-                    <span className="icons">
-                      <MdCompress />
-                    </span>
-                    <span className="carousel">pressure</span>
-                    <span className="temp">
-                      {item.values.pressureSurfaceLevelAvg.toFixed()}hpa
-                    </span>
-                  </div>
-                  <div className="carousel_List">
-                    <span className="icons">
-                      <MdOutlineWaterDrop />
-                    </span>
-                    <span className="carousel">humidity</span>
-                    <span className="temp">
-                      {item.values.humidityAvg.toFixed()}%
-                    </span>
-                  </div>
-                  <div className="carousel_List">
-                    <span className="icons">
-                      <FaWind />
-                    </span>
-                    <span className="carousel">wind speed</span>
-                    <span className="temp">
-                      {item.values.windSpeedAvg.toFixed()}
-                      {props.unit === "metric" ? "°C" : "°F"}
-                    </span>
-                  </div> */}

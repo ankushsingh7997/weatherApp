@@ -6,7 +6,7 @@ import "./forcastDiscriptions.css";
 
 const ForcastDescription = (props) => {
   const tempUnit = props.propsData.units === "metric" ? "°C" : "°F";
-  const windUnit = props.propsData.units === "metric" ? "°m/s" : "m/h";
+  // const windUnit = props.propsData.units === "metric" ? "°m/s" : "m/h";
 
   const cards = [
     {

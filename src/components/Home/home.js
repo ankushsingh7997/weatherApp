@@ -17,12 +17,12 @@ export default function Home() {
   const [weather, setWeather] = useState(null);
   const [units, setUnit] = useState("metric");
   const [bg, setBg] = useState(sunnybg);
-  const [currentState, setCurrentState] = useState("delhi");
+  // const [currentState, setCurrentState] = useState("delhi");
 
   const handleSearch = async () => {
     const data = await getData(searchCity, units);
     setWeather(data);
-    setCurrentState(searchCity);
+    // setCurrentState(searchCity);
   };
 
   const handleUnitClick = async () => {

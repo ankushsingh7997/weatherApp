@@ -6,7 +6,7 @@ import "./description.css";
 
 const Description = (props) => {
   const tempUnit = props.units === "metric" ? "°C" : "°F";
-  const windUnit = props.units === "metric" ? "°m/s" : "m/h";
+  // const windUnit = props.units === "metric" ? "°m/s" : "m/h";
 
   const cards = [
     {
